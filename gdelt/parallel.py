@@ -35,7 +35,7 @@ class NoDaemonProcessPool(multiprocessing.pool.Pool):
     Process = NoDaemonProcess
 
 
-def mp_worker(url, table=None):
+def _mp_worker(url, table=None):
     """Code to download the urls and blow away the buffer to keep memory usage down"""
 
     warnings.filterwarnings("ignore",
@@ -104,7 +104,7 @@ def mp_worker(url, table=None):
 
 if __name__ == '__main__':
     freeze_support()
-    p = multiprocessing.Process(target=mp_worker)
+    p = multiprocessing.Process(target=_mp_worker)
     p.start()
     # # Wait 10 seconds for foo
     # # time.sleep(35)

@@ -44,4 +44,4 @@ class TestGdeltDateInputs(TestCase):
         with self.assertRaises(Exception) as context:
             checked = date_input_check(date_sequence,version=2)
         the_exception = context.exception
-        return self.assertEqual(exp, str(the_exception), "Dates for version 2 fail outside of Feb 18 2015")
+        return self.assertEqual(exp, str(the_exception), "Dates for version 2 fail outside of Feb 18 2015"

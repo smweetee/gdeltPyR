@@ -270,7 +270,7 @@ def date_input_check(date, version):
                             datetime.datetime.now())))
 
 
-def tblCheck(dataframe, tbl):
+def _tblCheck(dataframe, tbl):
     """Checking the input of tblType."""
     if tbl == 'events' or tbl == '' or tbl == 'mentions':
         resultsUrlList = dataframe[2][dataframe[2].str.contains(
